@@ -442,7 +442,7 @@ def stand2():
         session['dealer'] = dhd
         session['player'] = phd
         session['deck'] = deck    
-        return redirect(url_for('standing2'))
+        return redirect(url_for('stand2'))
     elif dhd['value'] > 21:
         regWin(uu, wager)
         winnings = int(wager) * 2
