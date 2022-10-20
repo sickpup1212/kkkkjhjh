@@ -1,0 +1,45 @@
+{% extends 'auth/based.html' %}
+
+{% block title %} CREATE ACCT {% endblock %}
+
+{% block headlinks %}
+{{ metatwo() }}
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
+
+{% block headstyle %}
+  p {font-size:25px;}
+
+body {
+  background-image: url('../../static/lightbg.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+{% endblock %}
+
+{% block num1 %}
+<br><br><br><br><br>
+<div class="container-sm w3-padding-large w3-border w3-center w3-blue">
+      <form action = "http://localhost:5000/createuser" method = "post">
+         
+         <label for="username">
+         <p>create username:</p>
+         </label>
+         <p><input type = "text" name = "username" id="username"/></p>
+         <label for="email">
+         <p>email address:</p>
+         </label>
+         <p><input type = "email" name = "email" id="email"/></p>
+         <label for="password">
+         <p>create password:</p>
+         </label>
+         <p><input type = "password" name = "password" id="password"/></p>
+         <label for="confirm">
+         <p>confirm password:</p>
+         </label>
+         <p><input type = "password" name = "confirmpass" id="confirmpass"/></p>
+         <button class="w3-button w3-border-blue w3-round-xlarge w3-hover-black"><input type = "submit" value = "login" /></button>
+      </form>
+</div>
+{% endblock %}

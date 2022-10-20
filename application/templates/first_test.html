@@ -1,0 +1,95 @@
+{% from "macs.html" import navybarThree, crdimg %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="../static/navbar.css" rel="stylesheet">
+<link href="../static/testing.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<style>
+
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+  <div class="item-2">
+  </div>
+  <div class="item-3">
+    {{ navybarThree("eBLACKJACK", "New Hand", "/", "Leaderboard", "/#", "Logout", "/logout") }}
+  </div>
+  <div class="item-8">
+    <div class="w3-container">
+       <div class="w3-row">
+          <div class="w3-col l8 w3-center left">
+            <br>
+            <br>
+            <h1 class="bot">{{ uu }}</h1>
+            <h5 class="info">Hands Played = {{ hands }} &nbsp;&nbsp; | &nbsp;&nbsp;  Hands Won = {{ wins }}</h5>
+            <h5 class="info">Chips = {{ chips }}</h5>     
+             <br>
+               <img src="../static/cards/cardBack.png" alt="">
+               <img src="../static/cards/cardBack.png" alt="">
+          </div>
+     </div>
+     <div class="w3-row">
+       <div class="w3-col l8 w3-center left">
+         <p class="info">{{ info }}</p>
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Wager</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <form class='w3-center' action = "/deal" method = "post">
+          <div class="modal-body">
+            <label for="wager">
+            <p class="info">place bet here:</p>
+            </label>
+            <p class="info"><input type = "number" name = "wager" id="wager"/></p>  
+          </div>
+          <div class="modal-footer">
+            <input type="image" name="submit" src="../static/dealbut.jpg" alt="" width="145px;" height="95px;"/>
+         </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+       </div>
+    </div>
+  </div>
+</div>
+  <div class="item-9">
+     <div class="w3-container">
+       <div class="w3-row">
+          <div class="w3-col l8 w3-center left">
+            <br>
+            <br>
+ 
+              <h1 class="bot">Dealer</h1>
+           <div style="opacity: 0;">
+              <h5 class="info">Hands Played = {{ hands }} &nbsp;&nbsp; | &nbsp;&nbsp;  Hands Won = {{ wins }}</h5>
+              <h5 class="info">Chips = {{ chips }}</h5>
+           </div>     
+             <br>
+            <img src="../static/cards/cardBack.png" alt="">
+            <img src="../static/cards/cardBack.png" alt="">
+          </div>
+     </div>
+  </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+const myModal = document.getElementById('exampleModal')
+myModal.style.display = "block";
+</script>
+</body>
+
+</html>

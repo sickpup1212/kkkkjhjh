@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block four %}
+<h1 class="w3-center w3-border w3-round-xlarge" style="width: 50%;">{{ uu }}</h1>
+<h2>Chips = {{ chips }}      |</h2>
+<h2>Hands Won = {{ wins }}      |</h2>
+<h2>Hands Played = {{ hands }}</h2>
+
+<h2 style='text-align:right;'>{{ info }}</h2>
+{% endblock %}
+
+
+{% block eight %}
+        <div class="w3-container">
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+              <br><br><br>
+              <img src="../static/cards/cardBack.png" alt=""> <img src="../static/cards/cardBack.png" alt=""><br>
+            </div>
+          </div>
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+
+       <form class='w3-center' action = "/deal" method = "post">
+         <label for="wager">
+         <p>place bet here:</p>
+         </label>
+         <p><input type = "number" name = "wager" id="wager"/></p>
+         <input type="image" name="submit" src="../static/dealbut.jpg" alt="" width="145px;" height="95px;"/>
+      </form>
+           </div>
+          </div>
+        </div>
+{% endblock %}
+
+{% block nine %}
+        <div class="w3-container">
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+             <br><br><br>
+              <img src="../static/cards/cardBack.png" alt=""> <img src="../static/cards/cardBack.png" alt=""><br>
+            </div>
+          </div>
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+              <p> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
