@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+
+{% block four %}
+<h1 class="w3-center w3-border w3-round-xlarge" style="width: 50%;">{{ uu }}</h1>
+<h3>Chips = {{ chips }}      |</h3><h3>Wager = {{ wager }}</h3>
+{% if winnings > 0 %}
+<h3>winnings = {{ winnings }}</h3>
+{% else %}
+<p> </p>
+{% endif %}
+<h2 style='text-align:right;'>{{ info }}</h2>
+<br>
+{% endblock %}
+
+{% block five %}
+<h2>{{ info2 }}</h2>
+<br>
+{% endblock %}
+
+{% block eight %}
+        <div class="w3-container">
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+             <br><br><br>
+              
+              {% for i in bink %}
+               <img src="../static/cards/{{ i }}.png" alt="">
+              {% endfor %}
+          
+             
+            </div>
+          </div>
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+               {{ pval }}<br>
+               <br> <a href="/hit1" class="btn btn-primary"><h2>hit</h2></a> <a href="/stand2" class="btn btn-primary"><h2>stand</h2></a>
+            </div>
+          </div>
+        </div>
+{% endblock %}
+{% block nine %}
+        <div class="w3-container">
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+             <br><br><br>
+              <img src="../static/cards/{{ dcard1 }}.png" alt=""> <img src="../static/cards/{{ dcard2 }}.png" alt=""><br>
+              
+            </div>
+          </div>
+          <div class="w3-row">
+            <div class="w3-col w3-center">
+               {{ dval }}
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+      
+

@@ -1,0 +1,44 @@
+{% from "macros/macs.html" import navybarThree, navybarTwo, metatwo, style, scripts, jester, portfol, tester, chester, square, linechart %}
+
+<!DOCTYPE html>
+<lang="en">
+<head>
+  <title>{% block title %}basepage{% endblock %}</title>
+
+{% block headlinks %}
+{{ metatwo() }}
+{% endblock %}
+
+
+<style>
+
+{% block headstyle %}
+body {
+  background-image: url('../../static/lightbg.jpeg')
+}
+{% endblock %}
+
+</style>
+</head>
+<body>
+
+{% block topbar %}
+{{ navybarThree("CRAPFACTS", "Home", "/", "Create", "/createuser", "Login", "/login") }}
+{% endblock %}
+
+
+{% block num1 %}
+
+  <h2>Sidebar</h2><br>
+  <p>This sidebar is of full height (100%) and always shown.</p><br><hr>
+  <p>Scroll down the page to see the result.</p><br>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+{% endblock %}
+
+{{ scripts() }}
+</body>
+</html>
